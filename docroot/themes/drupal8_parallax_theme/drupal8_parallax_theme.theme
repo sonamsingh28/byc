@@ -135,8 +135,10 @@ function drupal8_parallax_theme_get_slider_content() {
     $fid = theme_get_setting('slide_image_path'.$i,'drupal8_parallax_theme');
     if (!empty($fid)) {
       $file = file_load($fid[0]);
-      $uri = $file->getFileUri();
-      $path = file_create_url($uri);
+      if ($file) {
+        $uri = $file->getFileUri();
+        $path = file_create_url($uri);
+      }
     }
     else {
       $path = base_path() . drupal_get_path('theme', 'drupal8_parallax_theme') . theme_get_setting('slide_image_path_' . $i, 'drupal8_parallax_theme');

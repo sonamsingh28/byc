@@ -2,6 +2,7 @@
 
 .block-block-content {
     padding: 40px 0;
+    margin: 0;
     h2 {
     	font-family: $fontheader;
 	    text-align: center;
@@ -14,6 +15,13 @@ blockquote {
     font-size: 35px !important;
     margin-bottom: 20px;
 }
+nav.breadcrumb {
+    ul {
+  		li:not(:last-child):after {
+	    	content: '>';
+		}
+  	}
+}
 /*Front page CSS start*/
 .path-frontpage {
 	.whybookyourcooks {
@@ -21,4 +29,19 @@ blockquote {
 	    background-size: cover;
 	    padding: 100px 0;
 	}
+	form {
+		label {
+			display: block;
+		}
+		@media (min-width: 570px) {
+			max-width: 570px;
+    		margin: 0 auto;
+		}
+	}
+	#block-contact {
+		background: url(../images/custom/contact-bg.jpg);
+	    background-size: cover;
+	    background-attachment: fixed;
+	}
+	
 }
