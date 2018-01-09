@@ -2,10 +2,15 @@
 /*Header*/
 /*Menu Color*/
 /*Mixins*/
-.block-block-content { padding: 40px 0; }
+.block-block-content { padding: 40px 0; margin: 0; }
 .block-block-content h2 { font-family: "Chicle", cursive; text-align: center; font-size: 35px !important; }
 
 blockquote { font-family: "Chicle", cursive; text-align: center; font-size: 35px !important; margin-bottom: 20px; }
 
+nav.breadcrumb ul li:not(:last-child):after { content: '>'; }
+
 /*Front page CSS start*/
 .path-frontpage .whybookyourcooks { background: url(../images/custom/bg.jpg); background-size: cover; padding: 100px 0; }
+.path-frontpage form label { display: block; }
+@media (min-width: 570px) { .path-frontpage form { max-width: 570px; margin: 0 auto; } }
+.path-frontpage #block-contact { background: url(../images/custom/contact-bg.jpg); background-size: cover; background-attachment: fixed; }
